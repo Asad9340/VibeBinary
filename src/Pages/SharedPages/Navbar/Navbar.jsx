@@ -26,7 +26,7 @@ export default function Navbar() {
             Services
           </li>
           <li className="hover:text-gray-200 transition cursor-pointer">
-            Portfolio
+            Projects
           </li>
           <li className="hover:text-gray-200 transition cursor-pointer">
             About
@@ -64,7 +64,7 @@ export default function Navbar() {
               Services
             </li>
             <li className="hover:text-gray-200 transition cursor-pointer">
-              Portfolio
+              Projects
             </li>
             <li className="hover:text-gray-200 transition cursor-pointer">
               About
