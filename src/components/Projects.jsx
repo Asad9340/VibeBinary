@@ -38,13 +38,20 @@ export default function Projects() {
       server: '#',
     },
     {
-      name: 'Blog Platform',
-      desc: 'Blogging platform with user authentication, posts, and comments functionality.',
-      tech: ['React', 'Express.js', 'MongoDB'],
-      image: 'https://via.placeholder.com/400x250.png?text=Blog+Platform',
-      live: '#',
-      github: '#',
-      server: '#',
+      name: 'Blog Nest',
+      desc: 'BlogNest is a sleek, responsive web application built for bloggers who value simplicity, elegance, and expressive writing. Designed to streamline the writing and reading experience, it offers a clean and intuitive interface that allows creators to focus on what truly matters—sharing their stories.',
+      tech: [
+        'React',
+        'Tailwind',
+        'express.js',
+        'Firebase',
+        'Node.js',
+        'MongoDB',
+      ],
+      image: 'https://i.postimg.cc/T3m1hzP5/blognest.png',
+      live: 'https://blognest-d41ff.web.app/',
+      github: 'https://github.com/sifat26/BlogNest_Client',
+      server: 'https://github.com/sifat26/BlogNest_Project_Server_Side',
     },
   ];
 
