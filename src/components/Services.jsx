@@ -62,19 +62,22 @@ export default function Services() {
       desc: 'Cross-platform mobile apps with Flutter.',
     },
     {
-      name: 'Bootstrap',
       icon: <FaBootstrap className="text-4xl text-purple-600" />,
+      title: 'Bootstrap',
       desc: 'Quickly design responsive and mobile-first websites.',
     },
     {
-      name: 'Next.js',
       icon: <SiNextdotjs className="text-4xl text-black" />,
+      title: 'Next.js',
       desc: 'Server-side rendered React applications with Next.js.',
     },
   ];
 
   return (
-    <section className="relative bg-[#154D71] py-20 font-fontPrimary">
+    <section
+      id="services"
+      className="relative bg-[#154D71] py-20 font-fontPrimary"
+    >
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-white">
