@@ -72,9 +72,12 @@ export default function Navbar() {
           >
             About
           </Link>
-          <li className="hover:text-gray-200 transition cursor-pointer">
+          <Link
+            to="/contact"
+            className="hover:text-gray-200 transition cursor-pointer"
+          >
             Contact
-          </li>
+          </Link>
         </ul>
 
         {/* Call to Action */}
@@ -136,9 +139,12 @@ export default function Navbar() {
             >
               About
             </Link>
-            <li className="hover:text-gray-200 transition cursor-pointer">
+            <Link
+              to="/contact"
+              className="hover:text-gray-200 transition cursor-pointer"
+            >
               Contact
-            </li>
+            </Link>
 
             <button className="bg-white text-[#154D71] px-5 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition">
               Get Started
