@@ -32,39 +32,37 @@ export default function Developers() {
   ];
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-[#154D71]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-4xl font-bold text-[#154D71] mb-4">
-          Our Developers
-        </h2>
-        <p className="text-gray-600 mb-12">
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-white mb-4">Our Developers</h2>
+        <p className="text-gray-200 mb-12">
           Meet the talented developers who bring creativity and expertise to
           every project.
         </p>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {team.map((member, index) => (
             <div
               key={index}
-              className="relative bg-white bg-opacity-20 backdrop-blur-md rounded-3xl shadow-lg p-4 flex flex-col items-center text-center border border-transparent hover:border-[#154D71] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:scale-105"
+              className="relative bg-white/20 backdrop-blur-md rounded-3xl shadow-lg p-6 flex flex-col items-center text-center border border-transparent hover:border-white transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:scale-105"
             >
               {/* Developer Image */}
               <div className="flex justify-center mb-2">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className=" w-64 h-[250px] rounded-3xl object-cover border-white border-[6px] shadow object-top"
+                  className="w-[280px] h-[250px] rounded-3xl object-cover border-white border-[6px] shadow object-top"
                 />
               </div>
 
               {/* Name & Role */}
-              <h3 className="text-2xl font-bold text-[#154D71]">
-                {member.name}
-              </h3>
-              <p className="text-blue-600 font-medium mb-4">{member.role}</p>
+              <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+              <p className="text-[#D1E9FF] font-medium mb-4">{member.role}</p>
 
               {/* Bio */}
-              <p className="text-gray-700 text-sm mb-6">{member.bio}</p>
+              <p className="text-gray-100 text-sm mb-6">{member.bio}</p>
 
               {/* Action Buttons */}
               <div className="flex flex-wrap justify-center gap-2">
@@ -72,7 +70,7 @@ export default function Developers() {
                   href={member.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-gray-900 transition flex items-center gap-2"
+                  className="bg-gray-900 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-gray-700 transition flex items-center gap-2"
                 >
                   GitHub <FaGithub />
                 </a>
@@ -80,7 +78,7 @@ export default function Developers() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-blue-800 transition flex items-center gap-2"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-blue-500 transition flex items-center gap-2"
                 >
                   LinkedIn <FaLinkedin />
                 </a>
@@ -88,7 +86,7 @@ export default function Developers() {
                   href={member.portfolio}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-green-700 transition"
+                  className="bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-green-500 transition"
                 >
                   Portfolio
                 </a>

@@ -66,9 +66,12 @@ export default function Navbar() {
           >
             Developers
           </Link>
-          <li className="hover:text-gray-200 transition cursor-pointer">
+          <Link
+            to="/about"
+            className="hover:text-gray-200 transition cursor-pointer"
+          >
             About
-          </li>
+          </Link>
           <li className="hover:text-gray-200 transition cursor-pointer">
             Contact
           </li>
@@ -127,9 +130,12 @@ export default function Navbar() {
               Developers
             </Link>
 
-            <li className="hover:text-gray-200 transition cursor-pointer">
+            <Link
+              to="/about"
+              className="hover:text-gray-200 transition cursor-pointer"
+            >
               About
-            </li>
+            </Link>
             <li className="hover:text-gray-200 transition cursor-pointer">
               Contact
             </li>
