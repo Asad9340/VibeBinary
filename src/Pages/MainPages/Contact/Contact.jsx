@@ -19,12 +19,12 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-[#154D71] font-fontPrimary">
+    <section className="pt-28 pb-20 bg-[#154D71] font-fontPrimary">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         {/* Intro Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-white mb-6">
-            Get in <span className="text-yellow-400">Touch</span>
+          <h1 className="text-4xl font-extrabold text-white mb-6">
+            Get in <span className="text-[#FFD700]">Touch</span>
           </h1>
           <p className="text-gray-200 text-lg max-w-2xl mx-auto leading-relaxed">
             Have a project in mind or want to collaborate? Fill out the form

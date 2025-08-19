@@ -55,8 +55,8 @@ export default function Packages() {
     <section id="packages" className="py-20 bg-[#154D71] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-white mb-4">
-            Our Packages
+          <h2 className="text-4xl font-extrabold text-white mb-6">
+            Our <span className="text-[#FFD700]">Packages</span>
           </h2>
           <p className="text-gray-200 max-w-3xl mx-auto leading-relaxed text-lg">
             Choose a package that fits your project requirements. We provide

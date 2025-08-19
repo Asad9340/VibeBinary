@@ -80,8 +80,8 @@ export default function Services() {
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          Our Services
+        <h2 className="text-4xl font-extrabold text-white mb-6">
+          Our <span className="text-[#FFD700]">Services</span>
         </h2>
         <p className="mt-3 text-gray-200 max-w-2xl mx-auto">
           From web to mobile, frontend to backend — we deliver complete digital

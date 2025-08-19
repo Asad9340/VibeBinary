@@ -58,7 +58,9 @@ export default function Projects() {
   return (
     <section className="py-20 bg-[#154D71] font-fontPrimary" id="projects">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Our Projects</h2>
+        <h2 className="text-4xl font-extrabold text-white mb-6">
+          Our <span className="text-[#FFD700]">Projects</span>
+        </h2>
         <p className="text-lg text-gray-200 mb-12">
           Explore some of our recent projects demonstrating our expertise in web
           and mobile development.

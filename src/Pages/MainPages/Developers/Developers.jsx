@@ -32,7 +32,7 @@ export default function Developers() {
   ];
 
   return (
-    <section className="py-20 bg-[#154D71]">
+    <section className="pt-28 pb-20 bg-[#154D71] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-white mb-4">Our Developers</h2>

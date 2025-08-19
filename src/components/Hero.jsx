@@ -1,4 +1,5 @@
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -21,9 +22,9 @@ export default function Hero() {
             <button className="bg-white text-[#154D71] px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition flex items-center gap-2">
               Get Started <FaArrowRight />
             </button>
-            <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#154D71] transition">
+            <Link to='/about' className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#154D71] transition">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
 

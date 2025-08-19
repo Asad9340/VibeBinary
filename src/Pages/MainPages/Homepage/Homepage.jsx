@@ -3,6 +3,7 @@ import Hero from '../../../components/Hero';
 import Services from '../../../components/Services';
 import Projects from '../../../components/Projects';
 import Packages from '../../../components/Packages';
+import Reviews from '../../../components/Reviews';
 
 const Homepage = () => {
   return (
@@ -10,7 +11,8 @@ const Homepage = () => {
       <Hero />
       <Services />
       <Projects />
-      <Packages/>
+      <Packages />
+      <Reviews />
     </div>
   );
 };

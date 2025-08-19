@@ -103,7 +103,10 @@ export default function Navbar() {
 
         {/* Call to Action */}
         <div className="hidden md:block">
-          <button className="bg-white text-[#154D71] px-5 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition">
+          <button
+            onClick={() => scrollOrNavigate('packages')}
+            className="bg-white text-[#154D71] px-5 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition"
+          >
             Get Started
           </button>
         </div>
@@ -166,7 +169,10 @@ export default function Navbar() {
               Contact
             </Link>
 
-            <button className="bg-white text-[#154D71] px-5 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition">
+            <button
+              onClick={() => scrollOrNavigate('packages')}
+              className="bg-white text-[#154D71] px-5 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition"
+            >
               Get Started
             </button>
           </ul>

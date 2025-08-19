@@ -32,12 +32,12 @@ export default function About() {
   };
 
   return (
-    <section className="py-20 bg-[#154D71] font-fontPrimary">
+    <section className="pt-28 pb-20 bg-[#154D71] font-fontPrimary">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Intro Section */}
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-extrabold text-white mb-6">
-            About <span className="text-yellow-400">Our Agency</span>
+          <h1 className="text-4xl font-extrabold text-white mb-6">
+            About <span className="text-[#FFD700]">Our Agency</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             We are a forward-thinking{' '}
