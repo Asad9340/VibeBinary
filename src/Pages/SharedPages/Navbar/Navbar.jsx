@@ -13,7 +13,7 @@ export default function Navbar() {
   useEffect(() => {
     if (location.pathname === '/') {
       const handleScroll = () => {
-        const sections = ['services', 'projects'];
+        const sections = ['services', 'projects', 'packages'];
         let current = '';
         sections.forEach(section => {
           const element = document.getElementById(section);
@@ -68,9 +68,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 font-medium">
-          <Link to="/" className={linkClasses('/')}>
-            Home
-          </Link>
+          <Link to="/">Home</Link>
 
           <li
             className={sectionClasses('services')}
@@ -84,6 +82,12 @@ export default function Navbar() {
             onClick={() => scrollOrNavigate('projects')}
           >
             Projects
+          </li>
+          <li
+            onClick={() => scrollOrNavigate('packages')}
+            className={sectionClasses('packages')}
+          >
+            Packages
           </li>
 
           <Link to="/developers" className={linkClasses('/developers')}>
@@ -123,7 +127,6 @@ export default function Navbar() {
                 setIsOpen(false);
                 window.location.href = '/';
               }}
-              className={linkClasses('/')}
             >
               Home
             </li>
@@ -140,6 +143,12 @@ export default function Navbar() {
               className={sectionClasses('projects')}
             >
               Projects
+            </li>
+            <li
+              onClick={() => scrollOrNavigate('packages')}
+              className={sectionClasses('packages')}
+            >
+              Packages
             </li>
 
             <Link
