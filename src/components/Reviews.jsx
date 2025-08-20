@@ -46,7 +46,7 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl shadow-xl p-8 flex flex-col justify-between transition transform hover:-translate-y-2 hover:shadow-2xl"
+              className="bg-[#17313E] rounded-3xl shadow-xl p-8 flex flex-col justify-between transition transform hover:-translate-y-2 hover:shadow-2xl"
             >
               <div className="flex items-center mb-4">
                 <img
@@ -55,10 +55,10 @@ export default function Reviews() {
                   className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-yellow-400"
                 />
                 <div>
-                  <h4 className="text-lg font-bold text-[#154D71]">
+                  <h4 className="text-lg font-bold text-white">
                     {review.name}
                   </h4>
-                  <p className="text-gray-500 text-sm">{review.role}</p>
+                  <p className="text-white/70 text-sm">{review.role}</p>
                   <div className="flex mt-1">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <FaStar
@@ -73,7 +73,7 @@ export default function Reviews() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-700 leading-relaxed">{review.message}</p>
+              <p className="text-white/80 leading-relaxed">{review.message}</p>
             </div>
           ))}
         </div>

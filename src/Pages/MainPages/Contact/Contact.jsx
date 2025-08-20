@@ -50,7 +50,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="px-5 py-2.5 rounded-xl border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
+              className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
             />
           </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="px-5 py-2.5 rounded-xl border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
+              className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
             />
           </div>
 
@@ -82,7 +82,7 @@ export default function Contact() {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="px-5 py-2.5 rounded-xl border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
+              className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
             />
           </div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="px-5 py-2.5 rounded-xl border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm resize-none"
+              className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm resize-none"
             />
           </div>
 
