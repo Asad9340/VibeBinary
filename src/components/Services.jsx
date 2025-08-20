@@ -93,7 +93,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center border-[3px] hover:border-[#FFD700] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="bg-[#17313E] rounded-2xl shadow-md p-8 flex flex-col items-center text-center border-[1px] hover:border-[#FFD700] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
             >
               {/* Icon inside circle */}
               <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#e0f2fb] shadow-inner">
@@ -101,12 +101,12 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3 className="mt-5 text-xl font-semibold text-[#0E3B57]">
+              <h3 className="mt-5 text-xl font-semibold text-white">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+              <p className="mt-3 text-gray-300 text-sm leading-relaxed">
                 {service.desc}
               </p>
             </div>

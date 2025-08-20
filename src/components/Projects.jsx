@@ -3,12 +3,11 @@ import { FaExternalLinkAlt, FaGithub, FaServer } from 'react-icons/fa';
 export default function Projects() {
   const projects = [
     {
-      name: "Doctor's Bd",
+      name: "Doctor's BD",
       desc: 'Online doctor booking platform where doctors can give prescriptions, manage follow-ups, and video call patients. Users can create multiple patient profiles, receive notifications and email alerts, and get AI-powered medical suggestions.',
       tech: [
         'React.js',
         'Tailwind CSS',
-        'Axios',
         'Node.js',
         'Express.js',
         'MongoDB',
@@ -29,15 +28,6 @@ export default function Projects() {
       server: 'https://github.com/Asad9340/Stay-Vista-Server',
     },
     {
-      name: 'Admin Dashboard',
-      desc: 'Interactive admin panel for managing users, content, and analytics.',
-      tech: ['Angular', 'Node.js', 'MongoDB'],
-      image: 'https://via.placeholder.com/400x250.png?text=Admin+Dashboard',
-      live: '#',
-      github: '#',
-      server: '#',
-    },
-    {
       name: 'Blog Nest',
       desc: 'BlogNest is a sleek, responsive web application built for bloggers who value simplicity, elegance, and expressive writing. Designed to streamline the writing and reading experience, it offers a clean and intuitive interface that allows creators to focus on what truly matters—sharing their stories.',
       tech: [
@@ -56,41 +46,51 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-20 bg-[#25262A] font-fontPrimary" id="projects">
+    <section id="projects" className="py-24 bg-[#25262A] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <h2 className="text-4xl font-extrabold text-white mb-6">
-          Our <span className="text-[#FFD700]">Projects</span>
+        <h2 className="text-5xl font-black text-white mb-7 tracking-tight drop-shadow">
+          Our{' '}
+          <span className="text-[#FFD700] underline underline-offset-4">
+            Projects
+          </span>
         </h2>
-        <p className="text-lg text-gray-200 mb-12">
-          Explore some of our recent projects demonstrating our expertise in web
-          and mobile development.
+        <p className="text-lg text-white/80 mb-14 max-w-2xl mx-auto leading-relaxed">
+          Explore our best work—projects that power real businesses, crafted
+          with modern tools and creative ideas.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative rounded-2xl overflow-hidden shadow-lg group bg-white hover:shadow-2xl transition-shadow duration-300"
+              className="group relative bg-[#23242A]/80 backdrop-blur-xl border-2 border-white/20 rounded-2xl shadow-[0_4px_14px_0_rgba(50,50,80,0.15)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_28px_0_rgba(50,50,120,0.25)] hover:border-[#FFD700]"
             >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              <div className="relative">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-56 object-cover rounded-t-2xl"
+                  style={{ filter: 'brightness(96%)' }}
+                />
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#23242A] to-transparent"></div>
+              </div>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
-                <h3 className="text-xl font-semibold text-white mb-2">
+              <div className="p-7 pt-5">
+                <h3 className="text-xl font-extrabold text-white mb-2 group-hover:text-[#FFD700] transition duration-200">
                   {project.name}
                 </h3>
-                <p className="text-gray-200 text-sm mb-4">{project.desc}</p>
+                <p className="text-gray-200 text-sm mb-4">
+                  {project.desc.length > 200
+                    ? project.desc.slice(0, 200) + '...'
+                    : project.desc}
+                </p>
 
-                {/* Technologies */}
-                <div className="flex flex-wrap justify-center gap-2 mb-4">
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-8">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-[#3A3A3A] text-[#E0E0E0] text-xs px-2 py-1 rounded-full"
+                      className="bg-[#23242A] text-[#F3F4F6] text-xs px-3 py-1 rounded-full border border-[#35363A] shadow"
                     >
                       {tech}
                     </span>
@@ -98,16 +98,16 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex gap-3 mt-2">
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-white bg-[#3A8DFF] px-3 py-1 rounded-md text-sm hover:bg-[#4788C8] transition"
+                      className="flex items-center gap-2 text-sm font-bold text-white px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
                     >
                       Live
-                      <FaExternalLinkAlt />
+                      <FaExternalLinkAlt className="text-base" />
                     </a>
                   )}
                   {project.github && (
@@ -115,10 +115,10 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-white bg-[#3A3A3A] px-3 py-1 rounded-md text-sm hover:bg-[#4A4A4A] transition"
+                      className="flex items-center gap-2 text-sm font-bold text-white px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
                     >
                       GitHub
-                      <FaGithub />
+                      <FaGithub className="text-base" />
                     </a>
                   )}
                   {project.server && (
@@ -126,10 +126,10 @@ export default function Projects() {
                       href={project.server}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-white bg-[#5C7CAC] px-3 py-1 rounded-md text-sm hover:bg-[#6B8CC4] transition"
+                      className="flex items-center gap-2 text-sm font-bold text-white px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
                     >
                       Server
-                      <FaServer />
+                      <FaServer className="text-base" />
                     </a>
                   )}
                 </div>

@@ -56,15 +56,15 @@ export default function Navbar() {
       : 'hover:text-gray-200 transition cursor-pointer';
 
   return (
-    <nav className="bg-[#154D71] font-fontPrimary text-white shadow-md fixed w-full z-50">
+    <nav className="bg-[#1A1B1E] font-fontPrimary text-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link to='/' className="flex items-center gap-2">
           <FaLaptopCode className="text-2xl text-white" />
           <h1 className="text-xl md:text-2xl font-bold tracking-wide">
             VibeBinary
           </h1>
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 font-medium">
@@ -123,7 +123,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#154D71]">
+        <div className="md:hidden bg-[#17313E]">
           <ul className="flex flex-col items-center gap-6 py-6 font-medium">
             <li
               onClick={() => {

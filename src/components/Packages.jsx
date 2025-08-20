@@ -29,7 +29,7 @@ export default function Packages() {
         'Backend: Node.js & Express',
         'Database: MongoDB or SQL',
       ],
-      bgColor: 'bg-[#134D71]',
+      bgColor: 'bg-[#17313E]',
       textColor: 'text-white',
       message: 'Hello, I am interested in the Standard Package.',
     },
