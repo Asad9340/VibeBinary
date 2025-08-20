@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="pt-28 pb-20 bg-[#25262A] font-fontPrimary">
+    <section className="pt-20 pb-20 bg-[#25262A] font-fontPrimary">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         {/* Intro Section */}
         <div className="text-center mb-16">
@@ -36,7 +36,7 @@ export default function Contact() {
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-[#34699A] rounded-xl shadow-xl p-10 flex flex-col gap-3"
+          className="bg-[#2E2F33] rounded-xl shadow-xl p-10 flex flex-col gap-3"
         >
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-2 text-white font-medium">
