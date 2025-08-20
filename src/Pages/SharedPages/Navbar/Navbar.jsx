@@ -110,7 +110,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <button
             onClick={() => scrollOrNavigate('packages')}
-            className="bg-white text-[#154D71] px-5 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition"
+            className="bg-[#154D71] text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-[#154D61] hover:shadow-lg transition"
           >
             Get Started
           </button>
