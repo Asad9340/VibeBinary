@@ -1,8 +1,10 @@
+import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
+
 export default function Packages() {
   const packages = [
     {
       title: 'Basic',
-      price: '$500',
+      price: '$100',
       features: [
         'Custom Website Design',
         'Responsive Layout (Mobile & Desktop)',
@@ -10,13 +12,13 @@ export default function Packages() {
         'Up to 1 Revision',
         'Frontend: React, Tailwind CSS, Bootstrap',
       ],
-      bgColor: 'bg-white',
-      textColor: 'text-[#154D71]',
-      buttonColor: 'bg-[#154D71] text-white hover:bg-[#0f2d3f]',
+      bgColor: 'bg-[#2E2F33]',
+      textColor: 'text-white',
+      message: 'Hello, I am interested in the Basic Package.',
     },
     {
       title: 'Standard',
-      price: '$1200',
+      price: '$200',
       features: [
         'Everything in Basic',
         'Up to 10 Pages',
@@ -27,13 +29,13 @@ export default function Packages() {
         'Backend: Node.js & Express',
         'Database: MongoDB or SQL',
       ],
-      bgColor: 'bg-[#1B6B8F]',
+      bgColor: 'bg-[#134D71]',
       textColor: 'text-white',
-      buttonColor: 'bg-yellow-400 text-[#154D71] hover:bg-yellow-500',
+      message: 'Hello, I am interested in the Standard Package.',
     },
     {
       title: 'Premium',
-      price: '$2500',
+      price: '$250',
       features: [
         'Everything in Standard',
         'Unlimited Pages',
@@ -45,14 +47,16 @@ export default function Packages() {
         'Backend: Node.js & Express',
         'Database: MongoDB & SQL',
       ],
-      bgColor: 'bg-white',
-      textColor: 'text-[#154D71]',
-      buttonColor: 'bg-[#154D71] text-white hover:bg-[#0f2d3f]',
+      bgColor: 'bg-[#2E2F33]',
+      textColor: 'text-white',
+      message: 'Hello, I am interested in the Premium Package.',
     },
   ];
 
+  const phoneNumber = '+8801754659997';
+
   return (
-    <section id="packages" className="py-20 bg-[#154D71] font-fontPrimary">
+    <section id="packages" className="py-20 bg-[#25262A] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-6">
@@ -72,30 +76,41 @@ export default function Packages() {
               className={`${pkg.bgColor} rounded-3xl shadow-xl p-8 flex flex-col justify-between transition transform hover:-translate-y-2 hover:shadow-2xl`}
             >
               <div>
-                <h3 className={`text-2xl font-bold mb-2 ${pkg.textColor}`}>
+                <h3 className="text-2xl font-bold mb-2 text-white">
                   {pkg.title}
                 </h3>
-                <p className={`text-3xl font-extrabold mb-6 ${pkg.textColor}`}>
+                <p className="text-3xl font-extrabold mb-6 text-[#FFD700]">
                   {pkg.price}
                 </p>
-
                 <ul className="space-y-2 mb-6">
                   {pkg.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className={`flex items-center ${pkg.textColor}`}
-                    >
-                      <span className="mr-2 text-green-500">✓</span> {feature}
+                    <li key={idx} className="flex items-center text-gray-100">
+                      <span className="mr-2 text-green-400">✓</span>
+                      {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <button
-                className={`${pkg.buttonColor} font-semibold py-3 rounded-xl w-full shadow-md transition`}
-              >
-                Choose Package
-              </button>
+              <div className="flex gap-4">
+                {/* WhatsApp Button */}
+                <a
+                  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(pkg.message)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#25D366] text-white flex items-center text-base justify-center gap-2 font-medium py-2 rounded-md w-1/2 shadow-md hover:bg-[#22C55E] transition"
+                >
+                  <FaWhatsapp className="text-base" /> WhatsApp
+                </a>
+
+                {/* Call Button */}
+                <a
+                  href={`tel:${phoneNumber}`}
+                  className="bg-[#3A8DFF] text-white flex items-center text-base justify-center gap-2 font-medium py-2 rounded-md w-1/2 shadow-md hover:bg-[#2563EB] transition"
+                >
+                  <FaPhoneAlt className="text-base" /> Call
+                </a>
+              </div>
             </div>
           ))}
         </div>

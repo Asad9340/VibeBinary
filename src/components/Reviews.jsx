@@ -30,7 +30,7 @@ export default function Reviews() {
   ];
 
   return (
-    <section className="py-20 bg-[#154D71] font-fontPrimary">
+    <section className="py-20 bg-[#25262A] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-white mb-6">

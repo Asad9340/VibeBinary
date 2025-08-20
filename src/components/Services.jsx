@@ -76,7 +76,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative bg-[#154D71] py-20 font-fontPrimary"
+      className="relative bg-[#25262A] py-20 font-fontPrimary"
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Section Title */}

@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="pt-28 pb-20 bg-[#154D71] font-fontPrimary">
+    <section className="pt-28 pb-20 bg-[#25262A] font-fontPrimary">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         {/* Intro Section */}
         <div className="text-center mb-16">

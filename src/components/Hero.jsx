@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="bg-[#154D71] font-fontPrimary text-white pt-24 md:pt-32 pb-16">
+    <section className="bg-[#25262A] font-fontPrimary text-white pt-24 md:pt-32 pb-16">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div>
@@ -19,10 +19,13 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="mt-6 flex gap-4">
-            <button className="bg-white text-[#154D71] px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition flex items-center gap-2">
+            <button className="text-white bg-[#154D71] px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-[#175a84] hover:shadow-lg transition flex items-center gap-2">
               Get Started <FaArrowRight />
             </button>
-            <Link to='/about' className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#154D71] transition">
+            <Link
+              to="/about"
+              className="border-2 border-[#154D71] px-6 py-3 rounded-lg font-semibold hover:bg-[#154D71] hover:text-white transition"
+            >
               Learn More
             </Link>
           </div>
