@@ -11,9 +11,10 @@ export default function Footer() {
     <footer className="bg-[#1A1B1E] text-gray-200 pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand / Logo */}
-        <div>
-          <img className='w-36 h-14 object-cover'
-            src="https://i.postimg.cc/MTNRVDRt/1000061219-removebg-preview.png"
+        <div className="flex gap-3 items-center">
+          <img
+            className="w-full h-24 object-contain"
+            src="https://i.postimg.cc/br4tngqP/vibe-binary-logo-removebg-preview.png"
             alt=""
           />
           <p className="text-gray-300">

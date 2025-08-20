@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#1A1B1E] font-fontPrimary text-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           {/* <FaLaptopCode className="text-2xl text-white" />
@@ -65,8 +65,8 @@ export default function Navbar() {
             VibeBinary
           </h1> */}
           <img
-            className="w-36 h-14 object-cover"
-            src="https://i.postimg.cc/MTNRVDRt/1000061219-removebg-preview.png"
+            className="w-28 object-contain"
+            src="https://i.postimg.cc/br4tngqP/vibe-binary-logo-removebg-preview.png"
             alt=""
           />
         </Link>
