@@ -50,7 +50,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
         <h2 className="text-5xl font-black text-white mb-7 tracking-tight drop-shadow">
           Our{' '}
-          <span className="text-[#FFD700] underline underline-offset-4">
+          <span className="text-[#FFD700]">
             Projects
           </span>
         </h2>
