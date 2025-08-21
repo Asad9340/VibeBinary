@@ -49,10 +49,7 @@ export default function Projects() {
     <section id="projects" className="py-24 bg-[#25262A] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
         <h2 className="text-5xl font-black text-white mb-7 tracking-tight drop-shadow">
-          Our{' '}
-          <span className="text-[#FFD700]">
-            Projects
-          </span>
+          Our <span className="text-[#FFD700]">Projects</span>
         </h2>
         <p className="text-lg text-white/80 mb-14 max-w-2xl mx-auto leading-relaxed">
           Explore our best work—projects that power real businesses, crafted
@@ -98,16 +95,19 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-3 mt-2">
+                <div className="flex gap-2 justify-center mt-2">
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-bold text-white px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
+                      className="flex items-center gap-1.5 text-sm md:text-base font-semibold md:font-bold text-white px-2 md:px-3 py-1.5 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
                     >
                       Live
-                      <FaExternalLinkAlt className="text-base" />
+                      <FaExternalLinkAlt
+                        size={14}
+                        className="text-sm md:text-base"
+                      />
                     </a>
                   )}
                   {project.github && (
@@ -115,10 +115,10 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-bold text-white px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
+                      className="flex items-center gap-1.5 text-sm md:text-base font-semibold md:font-bold text-white px-2 md:px-3 py-1.5 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
                     >
                       GitHub
-                      <FaGithub className="text-base" />
+                      <FaGithub size={14} className="text-sm md:text-base" />
                     </a>
                   )}
                   {project.server && (
@@ -126,10 +126,10 @@ export default function Projects() {
                       href={project.server}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-bold text-white px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
+                      className="flex items-center gap-1.5 text-sm md:text-base font-semibold md:font-bold text-white px-2 md:px-3 py-1.5 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:scale-105 transition-all"
                     >
                       Server
-                      <FaServer className="text-base" />
+                      <FaServer size={14} className="text-sm md:text-base" />
                     </a>
                   )}
                 </div>

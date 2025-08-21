@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FiGlobe } from 'react-icons/fi';
 
 export default function Developers() {
   const team = [
@@ -27,14 +28,13 @@ export default function Developers() {
       image: 'https://i.postimg.cc/R03h53qt/sifat.jpg',
       github: 'https://github.com/sifat26',
       linkedin: 'https://www.linkedin.com/in/sifat26/',
-      portfolio: 'Upcoming',
+      portfolio: 'https://tanvir-sifat.vercel.app/',
     },
   ];
 
   return (
     <section className="pt-28 pb-20 bg-[#25262A] font-fontPrimary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        {/* Heading */}
         <h1 className="text-4xl font-extrabold text-white mb-6">
           Our <span className="text-[#FFD700]">Developers</span>
         </h1>
@@ -43,36 +43,31 @@ export default function Developers() {
           every project.
         </p>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {team.map((member, index) => (
             <div
               key={index}
-              className="relative bg-[#2E2F33] backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-transparent hover:border-white transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:scale-105"
+              className="relative bg-[#2E2F33] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-transparent hover:border-[#FFD700] transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:scale-105"
             >
-              {/* Developer Image */}
               <div className="flex justify-center mb-2">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-[250px] h-[250px] rounded-full object-cover border-white border-[6px] shadow object-top"
+                  className="w-[250px] h-[250px] rounded-full object-cover border-white border-[6px] shadow-lg object-top"
                 />
               </div>
 
-              {/* Name & Role */}
               <h3 className="text-2xl font-bold text-white">{member.name}</h3>
               <p className="text-[#D1E9FF] font-medium mb-4">{member.role}</p>
-
-              {/* Bio */}
               <p className="text-gray-100 text-sm mb-6">{member.bio}</p>
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap justify-center gap-2">
+              {/* Modern Action Buttons */}
+              <div className="flex flex-wrap justify-center gap-3">
                 <a
                   href={member.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-semibold hover:bg-gray-700 transition flex items-center gap-2"
+                  className="px-4 py-2 bg-[#1E1F23] text-gray-200 rounded-md text-sm font-medium hover:bg-[#374151] hover:text-white transition flex items-center gap-2 shadow-sm"
                 >
                   GitHub <FaGithub />
                 </a>
@@ -80,7 +75,7 @@ export default function Developers() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-semibold hover:bg-blue-500 transition flex items-center gap-2"
+                  className="px-4 py-2 bg-[#1E1F23] text-gray-200 rounded-md text-sm font-medium hover:bg-[#0A66C2] hover:text-white transition flex items-center gap-2 shadow-sm"
                 >
                   LinkedIn <FaLinkedin />
                 </a>
@@ -88,9 +83,9 @@ export default function Developers() {
                   href={member.portfolio}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 text-white px-3 py-2 rounded-md text-sm font-semibold hover:bg-green-500 transition"
+                  className="px-4 py-2 bg-[#1E1F23] text-gray-200 rounded-md text-sm font-medium hover:bg-[#154D71] hover:text-white transition flex items-center gap-2 shadow-sm"
                 >
-                  Portfolio
+                  Portfolio <FiGlobe size={18} />
                 </a>
               </div>
             </div>
