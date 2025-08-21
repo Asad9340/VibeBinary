@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { FaSpinner, FaPaperPlane } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -7,15 +11,49 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: '' });
+  };
+
+  const validate = () => {
+    let newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.email) newErrors.email = 'Email is required';
+    if (!formData.subject) newErrors.subject = 'Subject is required';
+    if (!formData.message) newErrors.message = 'Message is required';
+    return newErrors;
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert('Thank you! Your message has been sent.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      toast.error('Please fill all fields correctly.');
+      return;
+    }
+
+    setLoading(true);
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    emailjs.send(serviceId, templateId, formData, publicKey).then(
+      response => {
+        toast.success('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setLoading(false);
+      },
+      err => {
+        toast.error('Failed to send message. Try again later.');
+        setLoading(false);
+      }
+    );
   };
 
   return (
@@ -38,6 +76,7 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="bg-[#2E2F33] rounded-xl shadow-xl p-10 flex flex-col gap-3"
         >
+          {/* Name */}
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-2 text-white font-medium">
               Your Name
@@ -49,11 +88,14 @@ export default function Contact() {
               placeholder="Enter your name"
               value={formData.name}
               onChange={handleChange}
-              required
               className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
             />
+            {errors.name && (
+              <span className="text-red-600 text-sm mt-1">{errors.name}</span>
+            )}
           </div>
 
+          {/* Email */}
           <div className="flex flex-col">
             <label htmlFor="email" className="mb-2 text-white font-medium">
               Your Email
@@ -65,11 +107,14 @@ export default function Contact() {
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
-              required
               className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
             />
+            {errors.email && (
+              <span className="text-red-600 text-sm mt-1">{errors.email}</span>
+            )}
           </div>
 
+          {/* Subject */}
           <div className="flex flex-col">
             <label htmlFor="subject" className="mb-2 text-white font-medium">
               Subject
@@ -81,11 +126,16 @@ export default function Contact() {
               placeholder="Enter the subject"
               value={formData.subject}
               onChange={handleChange}
-              required
               className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm"
             />
+            {errors.subject && (
+              <span className="text-red-600 text-sm mt-1">
+                {errors.subject}
+              </span>
+            )}
           </div>
 
+          {/* Message */}
           <div className="flex flex-col">
             <label htmlFor="message" className="mb-2 text-white font-medium">
               Message
@@ -97,16 +147,30 @@ export default function Contact() {
               placeholder="Enter your message"
               value={formData.message}
               onChange={handleChange}
-              required
               className="px-5 py-2.5 rounded-md border border-teal-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition shadow-sm resize-none"
             />
+            {errors.message && (
+              <span className="text-red-600 text-sm mt-1">
+                {errors.message}
+              </span>
+            )}
           </div>
 
+          {/* Button */}
           <button
             type="submit"
-            className="bg-[#154D71] text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-[#154D61] hover:shadow-lg transition mt-4"
+            disabled={loading}
+            className="bg-[#154D71] text-white px-5 py-2 rounded-md font-semibold shadow-md hover:bg-[#154D61] hover:shadow-lg transition mt-4 flex items-center justify-center gap-2 disabled:opacity-70"
           >
-            Send Message
+            {loading ? (
+              <>
+                <FaSpinner className="animate-spin" /> Sending...
+              </>
+            ) : (
+              <>
+                <FaPaperPlane /> Send Message
+              </>
+            )}
           </button>
         </form>
       </div>
