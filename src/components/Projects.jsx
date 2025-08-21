@@ -76,10 +76,10 @@ export default function Projects() {
                 <h3 className="text-xl font-extrabold text-white mb-2 group-hover:text-[#FFD700] transition duration-200">
                   {project.name}
                 </h3>
-                <p className="text-gray-200 text-sm mb-4">
-                  {project.desc.length > 200
-                    ? project.desc.slice(0, 200) + '...'
-                    : project.desc}
+                <p className="text-gray-200 text-sm mb-4 max-h-20 overflow-hidden">
+                  {project.desc.length > 120
+                    ? project.desc.slice(0, 120)
+                    : project.desc}...
                 </p>
 
                 {/* Tech Stack */}

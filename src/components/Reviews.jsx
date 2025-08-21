@@ -9,7 +9,7 @@ export default function Reviews() {
       rating: 5,
       message:
         'VibeBinary transformed our online presence. The website is fast, beautiful, and responsive. Excellent communication and support throughout!',
-      avatar: '/src/assets/user1.jpg',
+      avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
     {
       name: 'Jane Smith',
@@ -17,7 +17,7 @@ export default function Reviews() {
       rating: 4,
       message:
         'They built our app version and web platform flawlessly. Highly recommend for anyone looking for modern and scalable solutions.',
-      avatar: '/src/assets/user2.jpg',
+      avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
     },
     {
       name: 'Michael Johnson',
@@ -25,7 +25,7 @@ export default function Reviews() {
       rating: 5,
       message:
         'Professional team with great expertise in React, Next.js, Node.js, and Tailwind. Multiple revisions were handled smoothly.',
-      avatar: '/src/assets/user3.jpg',
+      avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
   ];
 
